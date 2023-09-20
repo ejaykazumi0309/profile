@@ -1,123 +1,389 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
 
-<style>
 
-    body{
 
-        background-image: url(https://media.tenor.com/ZdRh7cZgkGIAAAAd/hollow-purple.gif);
-        background-repeat: no-repeat;
-        background-size: cover;
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Team profile cards</title>
+
+
+
+
+
+    <style>* {
+
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+        font-family: 'Roboto', sans-serif;
+
+        color: #54677c;
+
     }
+
     
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: "Kumbh sans", sans-serif;
-    font-size: 18px;
-    color: hsl(229, 81%, 96%);
-}
-.main {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container {
-    background: hsl(0, 0%, 0%);
-    text-align: center;
-    max-width: 350px;
-    border-radius: 15px;
-    overflow: hidden;
-}
-.upper-container {
-    height: 150px;
-    width: 350px;
-    background: url(./images/bg-pattern-card.svg);
-    background-size: cover;
-}
-.img-sec {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: -50px auto -30px auto;
-    border: 5px solid hsl(0, 0%, 100%);
-}
-.img-sec img{
-    display: block;
-    height: auto;
-    width: 100%;
-}
-.card-body {
-    margin-top: 54px;
-    margin-bottom: -75px;
-    height: 250px;
-    line-height: 1.8rem;
-}
-.card-body .name {
-    font-size: 1.4rem;
-}
-.card-body .city {
-    margin-top: 10px;
-}
-.card-body .age, .card-body .city {
-    font-weight: 300;
-    font-size: 1.1rem;
-    color:  hsl(0, 0%, 59%);
-}
-.activity-container .act {
-    display:block;
-    font-weight: 300;
-    font-size: .9rem;
-    color: hsl(0, 0%, 59%);
-    letter-spacing: .1rem;
-}
-.activity-container {
-    padding-top: 22px;
-    padding-right: 40px;
-    padding-left: 40px;
-    border-top: 1px solid hsl(0, 10%, 88%);
-    margin-top: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-}
-.attribution { 
-    font-size: 16px; 
-    text-align: center;
-    padding: 15px;
-}
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
-}
+    body {
 
-</style>
+        min-height: 100vh;
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./style.css">
-  <title>Info</title>
+        width: 100%;
+
+        background-color: #0E2433;
+
+        display: flex;
+
+        /* Responsive behaviour */
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        align-items: center;
+
+        padding: 40px 16px;
+
+    }
+
+    
+
+    .card {
+
+        position: relative;
+
+        width: 300px;
+
+        background-color: #fff;
+
+        border-radius: 8px;
+
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+
+        padding: 16px;
+
+        margin:  56px 24px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+    }
+
+    
+
+    .card-image {
+
+        width: 150px;
+
+        height: 150px;
+
+        border-radius: 50%;
+
+        overflow: hidden;
+
+        position: absolute;
+
+        top: 0;
+
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.5),
+
+        0 5px 20px 0 rgba(0, 0, 0, 0.1);
+
+    }
+
+    
+
+    .card-image img {
+
+        width: 100%;
+
+        transform: scale(1.2);
+
+    }
+
+    
+
+    p {
+
+        line-height: 24px;
+
+        letter-spacing: 0.5px;
+
+        margin-bottom: 12px;
+
+        text-align: center;
+
+    }
+
+    
+
+    .name {
+
+        margin-top: 80px;
+
+        font-size: 1.4em;
+
+        color: #333;
+
+        font-weight: bold;
+
+        letter-spacing: 0.8px;
+
+        margin-bottom: 8px;
+
+    }
+
+    
+
+    .socials {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+    
+
+    button {
+
+        margin: 12px 8px;
+
+        width: 44px;
+
+        height: 44px;
+
+        border: none;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        transition: opacity 0.4s;
+
+    }
+
+    
+
+    button:hover {
+
+        opacity: 0.8;
+
+    }
+
+    
+
+    button i {
+
+        color: #fff;
+
+        font-size: 1.4em;
+
+    }
+
+    
+
+    /* Social media colors */
+
+    button.github {
+
+        background-color: #24292e;
+
+    } 
+
+    
+
+    button.twitter {
+
+        background-color: #1da1f2;
+
+    }
+
+    
+
+    button.pinterest {
+
+        background-color: #d3263a;
+
+    } </style>
+
+
+
+
+
+
+
+
+
 </head>
+
+
+
+
+
 <body>
-  <section class="main">
-    <div class="container">
-      <div class="upper-container"></div>
-          <div class="img-sec"><img src="haha123.png" alt=""></div>
-      <div class="card-body">
-      <h2 class="name">Ejay Kazumi <span class="age">17</span></h2>
-      <h3 class="city">Philippines</h3>
-      <p>Hello guys Im Ejay Kazumi a begginer in this field im trying my best to learn alot and pursue my dream</p>
+
+
+
+
+
+    <div class="card">
+
+        <div class="card-image">
+
+            <img src="ejay.png" alt="Profile image">
+
+        </div>
+
+        <p class="name">Ejay Rosete</p>
+
+        <p>Leader</p>
+
+        <p>Hello I'm Ejay Rosete a student from Grade 12 Neptune major in CSS</p>
+
+        <div class="socials">
+
+            <button class="github"><i class="fab fa-facebook"></i></button>
+
+            <button class="twitter"><i class="fab fa-twitter"></i></button>
+
+            <button class="pinterest"><i class="fab fa-youtube"></i></button>
+
+        </div>
+
     </div>
+
+
+
+    <div class="card">
+
+        <div class="card-image">
+
+            <img src="./images/profile2.jpg" alt="Profile image">
+
+        </div>
+
+        <p class="name">Lhara Precious Edig</p>
+
+        <p>Member</p>
+
+        <p>Hello I'm Precious Lhara Edig a student from Grade 12 Neptune major in CSS </p>
+
+        
+
     </div>
-  </section>
+
+
+
+    <div class="card">
+
+        <div class="card-image">
+
+            <img src="./images/profile3.jpg" alt="Profile image">
+
+        </div>
+
+        <p class="name">Mei Quiñones</p>
+
+        <p>Member</p>
+
+        <p>Hello I'm Me Quiñones a student from Grade 12 Neptune major in CSS </p>
+
+       
+
+    </div>
+
+
+
+    <div class="card">
+
+        <div class="card-image">
+
+            <img src="./images/profile1.jpg" alt="Profile image">
+
+        </div>
+
+        <p class="name">Mark Anthony Josol</p>
+
+        <p>Member</p>
+
+        <p>Hello I'm Mark Anthony Josol a student from Grade 12 Neptune major in CSS </p>
+
+        
+    </div>
+
+
+
+    <div class="card">
+
+        <div class="card-image">
+
+            <img src="./images/profile2.jpg" alt="Profile image">
+
+        </div>
+
+        <p class="name">Mary Jane Martinez</p>
+
+        <p>Member</p>
+
+        <p>Hello I'm Mary Jane Martinez a student from Grade 12 Neptune major in CSS </p>
+
+       
+
+    </div>
+
+
+
+    <div class="card">
+
+        <div class="card-image">
+
+            <img src="./images/profile3.jpg" alt="Profile image">
+
+        </div>
+
+        <p class="name">Angel Mae Olano</p>
+
+        <p>Member</p>
+
+        <p>Hello I'm Angel Mae Olano a s
+        tudent from Grade 12 Neptune major in CSS </p>
+        
+        
+
+       
+
+    </div>
+
+    
+
 </body>
+
 </html>
